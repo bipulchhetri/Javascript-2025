@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BG CHANGER - JS PROJECT</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div>
+        <button id="myButton">#019370</button>
+        <button id="myButtontwo">#016754</button>
+      </div>
+      <h2>Copy your code</h2>
+      <div class="copycode">
+     Background-image
+        
+        linear-gradient(to right
+        ,rgb(92,145,229),rgb(152,63,198))
+      </div>
+    </section>
+
+    <script>
+      let buttonOne = document.getElementById("myButton");
+      let buttonTwo = document.getElementById("myButtontwo");
+      let copycodediv = document.querySelector(".copycode");
+      let rgbone='rgb(92,145,229)';
+      let rgbtwo="rgb(152,63,198)";
+      const HexvalueGet = () => {
+        let HexValue = "0123456789abcdef";
+        let colors = "#";
+        for (let i = 0; i < 6; i++) {
+          colors = colors + HexValue[Math.floor(Math.random() * 16)];
+        }
+        return colors;
+      };
+
+      const handlebtnOne = () => {
+         rgbone = HexvalueGet();
+         buttonOne.innerText=rgbone;
+        console.log(rgbone);
+        document.body.style.backgroundImage = `linear-gradient(to right ,${rgbone},${rgbtwo})`;
+        copycodediv.innerHTML = `background-image:linear-gradient(to right,${rgbone},${rgbtwo})`;
+      };
+      const handlebtnTwo = () => {
+         rgbtwo = HexvalueGet();
+         buttonTwo.innerText=rgbtwo;
+
+        console.log(rgbtwo);
+        document.body.style.backgroundImage = `linear-gradient(to right ,${rgbone},${rgbtwo})`;
+
+        copycodediv.innerHTML = `background-image:linear-gradient(to right,${rgbone}, ${rgbtwo})`;
+      };
+      buttonOne.addEventListener("click", handlebtnOne);
+      buttonTwo.addEventListener("click", handlebtnTwo);
+
+
+
+    </script>
+  </body>
+</html>

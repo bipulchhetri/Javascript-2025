@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TO DO APPLICATION</title>
+</head>
+<body>
+    <div></div>
+    <form action="">
+        <div>
+            <input type="text" id="inputvalue">
+            <button class="btn">Add Todo</button>
+
+
+        </div>
+        <div class="todo-list-items">
+
+        </div>
+    </form>
+<script>
+        const todolistitems = document.querySelector(".todo-list-items");
+        const inputvalue=document.getElementById("inputvalue")
+
+
+// function created
+const addTodoList=(e)=>{
+    e.preventDefault();
+   const divElement=document.createElement('div')
+   divElement.classList.add('main_todo')
+   divElement.innerHTML=`<li>${inputvalue.value}
+</li>
+<button class="deleteBtn">Delete</button>`;
+todolistitems.append(divElement)
+
+}
+
+document.querySelector('.btn').addEventListener('click',(e)=>{
+    addTodoList(e);
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- Block scope and Shadowing -->
+ {
+    <!-- first understand this is block -->
+ }
+
+ <!-- Scope -->
+
+ {
+   let a=5;
+   const b=10     <!-- whatever you declear in this block is called scope -->
+ }
+
+ <!-- There are 3 type of scope block scope ,global,and script -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        // let a=10;
+        // {
+        //     let a=5;
+        //   const  b=10;
+        //   console.log(a)
+        
+        // }
+        // console.log(a);
+        // here you can see in let you will get 2 different values
+        // But if i do same in var its shadowing
+        var a=10
+        {
+            var a=20;
+            const b=30;
+        }
+        console.log(a)
+        // you can see 20 is paint its means block scope do shadowing to global scope
+    </script>
+ </body>
+ </html>

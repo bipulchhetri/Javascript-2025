@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" >
+        <div class="buttons">
+            <button onclick="Value('7')">7</button>
+            <button onclick="Value('8')">8</button>
+            <button onclick="Value('9')">9</button>
+            <button onclick="deleteLastDigit()">DEL</button>
+
+            <button onclick="Value('4')">4</button>
+            <button onclick="Value('5')">5</button>
+            <button onclick="Value('6')">6</button>
+            <button onclick="Value('+')">+</button>
+
+            <button onclick="Value('1')">1</button>
+            <button onclick="Value('2')">2</button>
+            <button onclick="Value('3')">3</button>
+            <button onclick="Value('-')">-</button>
+
+            <button onclick="Value('.')">.</button>
+            <button onclick="Value('0')">0</button>
+            <button  onclick="Value ('/')">/</button>
+            <button  onclick="Value('*')">*</button>
+            <button class="big-btn" onclick="clearDisplay()">RESET</button>
+
+            <button class="big-btn-two" onclick="calculateResult()">=</button>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
